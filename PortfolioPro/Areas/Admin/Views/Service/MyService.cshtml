@@ -1,0 +1,65 @@
+﻿
+@model List<PortfolioPro.Models.TbService>
+
+<link href="~/Admin/vendor/simple-datatables/style.css" rel="stylesheet">
+
+<div class="col-12">
+    <div class="card recent-sales">
+
+
+        <div class="card-body">
+            <h5 class="card-title">
+                <a asp-controller="Service" asp-action="Edit" class="btn btn-success">Add</a>
+            </h5>
+
+
+            <!-- Table with stripped rows -->
+            <table class="table table-borderless datatable">
+
+                <thead>
+
+                    <tr>
+                        <th>Service Name</th>
+                        <th>Service Description</th>
+                        
+                        <th>Image</th>
+
+                    </tr>
+
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>@item.ServiceName</td>
+                            <td>@item.ServiceDescription</td>
+                            >
+                            <td>
+                                <img src="@string.Format("/Admin/img/{0}",item.Image)" width=50 height="50" />
+                            </td>
+
+                            <td>
+                                <a asp-controller="Service" asp-action="Edit" asp-route-id="@item.Id " class="btn btn-info">تعديل</a>
+
+                                <a asp-controller="Service" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">حذف</a>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="~/Admin/vendor/simple-datatables/simple-datatables.js"></script>
+
+
+
+
+
+
+

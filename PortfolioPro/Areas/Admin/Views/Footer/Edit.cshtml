@@ -1,0 +1,94 @@
+﻿
+
+@model TbFooter
+
+<link href="https://fonts.gstatic.com" rel="preconnect">
+
+<link href="~/Admin/vendor/quill/quill.snow.css" rel="stylesheet">
+<link href="~/Admin/vendor/quill/quill.bubble.css" rel="stylesheet">
+<link href="~/Admin/vendor/remixicon/remixicon.css" rel="stylesheet">
+<link href="~/Admin/vendor/simple-datatables/style.css" rel="stylesheet">
+
+<!-- =======================================================
+* Template Name: NiceAdmin - v2.2.0
+* Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+======================================================== -->
+
+<main id="main" class="main">
+    <section class="section">
+        <div class="row">
+
+            <div class="col-lg-6">
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Vertical Form</h5>
+
+                        <!-- Vertical Form -->
+
+                        <form class="row g-3" method="post" asp-controller="Footer" asp-action="Save">
+                            <div class="col-12">
+
+                                <input type="hidden" class="form-control" asp-for="Id">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label"></label>
+                                <input type="text" class="form-control" placeholder="Your Name" asp-for="YourName">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label"></label>
+                                <input type="email" class="form-control" placeholder="Your Email" asp-for="YourEmail">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Subject</label>
+                                <input type="text" class="form-control" asp-for="Subject">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Message</label>
+                                <input type="text" class="form-control" asp-for="Message">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label"></label>
+                                <input type="text" class="form-control" asp-for="Description">
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="reset" class="btn btn-secondary">Reset</button>
+                            </div>
+                        </form><!-- Vertical Form -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="~/Admin/vendor/apexcharts/apexcharts.min.js"></script>
+
+<script src="~/Admin/vendor/chart.js/chart.min.js"></script>
+<script src="~/Admin/vendor/echarts/echarts.min.js"></script>
+<script src="~/Admin/vendor/quill/quill.min.js"></script>
+<script src="~/Admin/vendor/simple-datatables/simple-datatables.js"></script>
+<script src="~/Admin/vendor/tinymce/tinymce.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
